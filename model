@@ -1,0 +1,23 @@
+const modelingPhotos = [
+  { id: 1, src: '/images/model1.jpg', alt: 'Editorial' },
+  // ... more photos
+];
+
+export function Modeling() {
+  return (
+    <div className="p-8 bg-white">
+      <h2 className="text-5xl font-bold text-brandRed mb-12">Modeling</h2>
+      <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+        {modelingPhotos.map((photo) => (
+          <motion.div 
+            whileHover={{ scale: 1.02 }}
+            className="rounded-xl overflow-hidden cursor-pointer"
+            key={photo.id}
+          >
+            <img src={photo.src} alt={photo.alt} className="w-full h-auto object-cover" />
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
