@@ -1,0 +1,23 @@
+const videos = ['/videos/short1.mp4', '/videos/short2.mp4'];
+
+export function ContentCreation() {
+  return (
+    <div className="bg-brandBlue p-8 min-h-screen">
+      <h2 className="text-5xl font-bold text-brandCream mb-12">Content Creation</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+        {videos.map((vid, index) => (
+          <div key={index} className="relative w-full max-w-[350px] aspect-[9/16] bg-black rounded-3xl overflow-hidden border-8 border-brandBeige shadow-2xl">
+            <video 
+              controls 
+              loop 
+              className="w-full h-full object-cover"
+              playsInline
+            >
+              <source src={vid} type="video/mp4" />
+            </video>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
