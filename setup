@@ -1,0 +1,17 @@
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        brandRed: '#E85234',
+        brandPink: '#F9B8AF',
+        brandBlue: '#96ADD6',
+        brandBeige: '#E8E4C8',
+        brandCream: '#F2EEE9',
+      },
+      fontSize: {
+        '10xl': '10rem', // For that 6'9" scale!
+      }
+    },
+  },
+}
